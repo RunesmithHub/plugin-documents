@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <IsTestProject>true</IsTestProject>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+    <PackageReference Include="xunit.v3" />
+    <PackageReference Include="xunit.runner.visualstudio" />
+  </ItemGroup>
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Runesmith.Documents\Runesmith.Documents.csproj" />
+    <!-- The plugin leaves out the libraries Runesmith provides; the tests need their own copies. -->
+    <PackageReference Include="Runesmith.Sdk" />
+    <PackageReference Include="System.Composition.Hosting" />
+    <PackageReference Include="System.Composition.TypedParts" />
+    <!-- The engine Runesmith highlights with, to check that it reads every grammar. -->
+    <PackageReference Include="TextMateSharp" />
+  </ItemGroup>
+</Project>

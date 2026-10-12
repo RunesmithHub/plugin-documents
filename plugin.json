@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "runesmith.documents",
+  "name": "Document Languages",
+  "version": "0.1.0",
+  "summary": "Highlighting, comments and brackets for TeX, LaTeX, BibTeX, Asciidoc and Typst.",
+  "authors": [
+    "Dylan de Beer"
+  ],
+  "license": "Apache-2.0",
+  "repository": "https://github.com/RunesmithHub/plugin-documents",
+  "runesmithApi": "^0.2.0",
+  "projects": {
+    "contracts": "src/Runesmith.Documents.Contracts/Runesmith.Documents.Contracts.csproj",
+    "implementation": "src/Runesmith.Documents/Runesmith.Documents.csproj"
+  },
+  "icon": "icon.png",
+  "categories": [
+    "Languages"
+  ],
+  "keywords": [
+    "tex",
+    "ltx",
+    "bib",
+    "sty",
+    "cls",
+    "adoc",
+    "typ"
+  ]
+}

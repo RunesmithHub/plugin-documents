@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Description>Document Languages for Runesmith: the files, highlighting, comments and brackets of 5 languages.</Description>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Runesmith.Documents.Contracts\Runesmith.Documents.Contracts.csproj" />
+    <!-- Runesmith supplies the SDK when it loads the plugin, so it is not copied next to it. -->
+    <PackageReference Include="Runesmith.Sdk" ExcludeAssets="runtime" />
+  </ItemGroup>
+  <!-- The TextMate grammars ship as files beside the assembly, where GrammarFiles finds them. -->
+  <ItemGroup>
+    <None Include="grammars\**\*.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>
